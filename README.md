@@ -46,17 +46,17 @@ This tool is especially suited for managing both weekday and weekend standby dut
 
 ---
 
-## 📐 System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
 
-    A[Duty Roster Sheet<br/>(Google Sheets)]
-        -->|1. Read daily schedule| B[Apps Script Processing Module]
+    A["Duty Roster Sheet\n(Google Sheets)"]
+        -->|1. Read daily schedule| B["Apps Script\nProcessing Module"]
 
-    B -->|2. Update OFF usage<br/>Create/Use/Expire OFFs| C[OFF Tracker Sheet<br/>(Google Sheets)]
+    B -->|2. Update OFF usage\nCreate/Use/Expire OFFs| C["OFF Tracker Sheet\n(Google Sheets)"]
 
-    subgraph B2[Apps Script Processing Module]
+    subgraph B2["Apps Script Processing Module"]
         direction TB
         B1[main()] 
         B3[dailyRead()] 
@@ -73,6 +73,7 @@ flowchart TD
     B1 --> B7
     B3 --> B8
 ```
+
 
 ---
 
