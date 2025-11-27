@@ -1,4 +1,10 @@
-# Off Tracker
+# NS Off Tracker
+
+![Google Sheets](https://img.shields.io/badge/Google%20Sheets-34A853?logo=google-sheets&logoColor=white)
+![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-4285F4?logo=google&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 
 **Version:** 2.0 (291025)  
 **Author:** 3SG Debansha  
@@ -20,20 +26,23 @@ Automatically manages offs, expiry, and tracker updates, and allows manual off c
 ---
 
 ## Overview
-Off Tracker is designed to automate the tracking of duty offs for teams using Google Sheets.  
-It reads daily duty rosters, updates off balances, handles expiry of old offs, and provides sidebars for administrators to manually create or delete offs.  
+Off Tracker is designed to automate duty-off tracking for teams using Google Sheets.  
+It reads a daily duty roster and:  
+- Issues “offs” for standby duties on weekends  
+- Tracks “off” entitlements and usage  
+- Automatically expires and cleans up old/off tokens  
+- Allows admins to add or remove manually offs when needed — all via custom sidebars   
 This tool is especially suited for managing both weekday and weekend standby duties.
 
 ---
 
 ## Features
-- Daily automatic reading of duty roster
-- Off creation and deletion via custom sidebar
-- Automatic expiry of old/used/deleted offs
-- Tracker for unconsumed offs per user
-- Handles weekdays and weekend standby duties
-- Fully configurable standby roles via a separate sheet
-- Logs changes for transparency
+- **Daily automation:** Roster parsing & off-management via time-triggered `main()`
+- **Manual UI:** Sidebar for *Create Off*, *Delete Off*, *Filter Offs*    
+- **Expiry logic:** Auto-expiry and cleanup after one month  
+- **Configurable standby roles:** Standby-role list maintained separately, easily updated  
+- **Tracker sheet:** Shows current off balance per user  
+- **Off Logs:** Tracks changes for transparency
 
 ---
 
