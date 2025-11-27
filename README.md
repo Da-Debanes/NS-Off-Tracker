@@ -61,6 +61,15 @@ This tool is especially suited for managing both weekday and weekend standby dut
 ## Screenshots
 > Replace the placeholders with actual screenshots in `/screenshots` folder
 
+![Duty Roster Sample](screenshots/dutyroster.png)
+*Sample Duty Roster for reference*
+
+![Offs Database Sample](screenshots/offsdb.png)
+*Sample list of offs*
+
+![Offs Tracker](screenshots/tracker.png)
+*Counter of how many offs an individual has*
+
 ![Filter Offs Sidebar](screenshots/filter.png)  
 *Filter offs by user or status*
 
