@@ -48,41 +48,7 @@ This tool is especially suited for managing both weekday and weekend standby dut
 
 ## System Architecture
 
-+-------------------------------------------------------------+
-|                       Duty Roster Sheet                     |
-|-------------------------------------------------------------|
-| • Daily schedule entered by unit personnel                  |
-+------------------------------+------------------------------+
-                               |
-                               | 1. Apps Script reads roster
-                               v
-+-------------------------------------------------------------+
-|                Apps Script Processing Module                |
-|-------------------------------------------------------------|
-| • main()                                                    |
-| • dailyRead()                                               |
-| • createOff()                                               |
-| • useOff()                                                  |
-| • cleanUp()                                                 |
-| • offEvents()                                               |
-| • doingNTM()                                                |
-|                                                             |
-| Logic Engine:                                               |
-|  - Detect OFF / Standby activities                          |
-|  - Apply NS-specific rules                                  |
-|  - Update balances                                          |
-|  - Maintain clean database                                  |
-+------------------------------+------------------------------+
-                               |
-                               | 2. Writes processed results
-                               v
-+-------------------------------------------------------------+
-|                       OFF Tracker Sheet                     |
-|-------------------------------------------------------------|
-| • Central OFF database                                      |
-| • Records usage, creation, balance                          |
-+-------------------------------------------------------------+
-
+![System Architecture Diagram](screenshots/architecture.png)
 
 ---
 
