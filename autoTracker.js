@@ -110,7 +110,8 @@ function cleanUp(now) {
         (now.getFullYear() - refDate.getFullYear()) * 12 +
         (now.getMonth() - refDate.getMonth());
 
-      if (diffMonths >= 1) rowsToDelete.push(i + 1);
+
+      if (diffMonths >= 2 || (diffMonths === 1 && now.getDate() >= refDate.getDate())) rowsToDelete.push(i + 1);
     }
   }
 
@@ -239,7 +240,7 @@ function updateTracker(owner, change) {
   }
   // If not found, append new row
   if (ind === -1) {
-    tracker.appendRow([name(owner), 0, 0]);
+    tracker.appendRow([name(owner), 0, 0, 0]);
     data = tracker.getDataRange().getValues();
     ind = data.length - 1;
   }
@@ -256,7 +257,7 @@ function updateTracker(owner, change) {
     tracker.getRange(ind + 1, 2).setValue(offs - 1);
     tracker.getRange(ind + 1, 3).setValue(exp + 1);
   } else if (change === -2) {
-    tracker.getRange(ind + 1, 2).setValue(unacc + 1);
+    tracker.getRange(ind + 1, 4).setValue(unacc + 1);
   }
 }
 
